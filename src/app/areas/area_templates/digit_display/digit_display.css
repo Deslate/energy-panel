@@ -1,0 +1,22 @@
+.DigitDisplay{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.DigitDisplay span{
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+
+}
+
+.DigitDisplay h2{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+}

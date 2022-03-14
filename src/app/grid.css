@@ -1,0 +1,103 @@
+
+.grid-container {
+    height: calc(100% - 20px);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 60px 1fr 4fr;
+    grid-gap: 10px;
+    background-color: #142f9a;
+    color: white;
+    padding: 10px;
+}
+
+.grid-container .area {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+
+    display: flex;
+
+    /* border:2px inset #d5deff19; */
+    background:
+    linear-gradient(to left, #9EE7FF, #1C75AC) left top no-repeat, 
+    linear-gradient(to bottom, #9EE7FF, #1C75AC) left top no-repeat, 
+    linear-gradient(to left, #9EE7FF, #1C75AC) right top no-repeat,
+    linear-gradient(to bottom, #9EE7FF, #1C75AC) right top no-repeat, 
+    linear-gradient(to left, #9EE7FF, #1C75AC) left bottom no-repeat,
+    linear-gradient(to bottom, #9EE7FF, #1C75AC) left bottom no-repeat,
+    linear-gradient(to left, #9EE7FF, #1C75AC) right bottom no-repeat,
+    linear-gradient(to left, #9EE7FF, #1C75AC) right bottom no-repeat;
+    background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px;  
+
+    box-shadow:
+    inset 0px 0px 10px 10px rgba(255,255,255,.03),
+    0px 0px 3px 3px rgba(255,255,255,.02);
+}
+
+.area_title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.area_c {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.col_l{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.col_r{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.row_ct {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-container .row, .grid-container .col {
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    display: grid;
+    grid-gap: 10px;
+}
+
+.area_l1, .area_r1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.area_l2, .area_r2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.area_l3, .area_r3{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.area_ct1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.area_ct2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.area_ct3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}

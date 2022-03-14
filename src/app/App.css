@@ -1,0 +1,14 @@
+@import "./grid.css";
+
+html, body, #root, .App{
+  height: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.area_l1 {
+  display: grid;
+  grid-template-rows: 20px 1fr 3fr;
+}
