@@ -1,0 +1,21 @@
+.FilledCurve{
+    text-align: left;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.graph_container{
+    text-align: left;
+    align-self: center;
+    height: calc(100% - 15px);
+    margin-top: 10px;
+    width: calc(100% - 20px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}

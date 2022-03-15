@@ -4,6 +4,8 @@ import Area1 from './areas/area1';
 import Area4 from './areas/area4';
 import TitleArea from './areas/title_area/TitleArea';
 import MapArea from './areas/map_area/MapArea.js';
+import Area8 from './areas/area8';
+import Area9 from './areas/area9';
 
 function App() {
     return (
@@ -23,8 +25,8 @@ function App() {
                 <div class="area area_c"><MapArea/></div>
                 <div class="col col_r">
                     <div class="area area_r1"><Area1/></div>
-                    <div class="area area_r2"><Area1/></div>
-                    <div class="area area_r3"><Area1/></div>
+                    <div class="area area_r2"><Area8/></div>
+                    <div class="area area_r3"><Area9/></div>
                 </div>
             </div>
         </div>

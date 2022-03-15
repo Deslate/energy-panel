@@ -5,7 +5,7 @@
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 60px 1fr 4fr;
     grid-gap: 10px;
-    background-color: #142f9a;
+    background-color: #252832;
     color: white;
     padding: 10px;
 }
@@ -72,6 +72,10 @@
     grid-gap: 10px;
 }
 
+.grid-container .col {
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .area_l1, .area_r1{
     grid-row-start: 1;
     grid-row-end: 2;
@@ -80,11 +84,13 @@
 .area_l2, .area_r2{
     grid-row-start: 2;
     grid-row-end: 3;
+    overflow: hidden;
 }
 
 .area_l3, .area_r3{
     grid-row-start: 3;
     grid-row-end: 4;
+    overflow: hidden;
 }
 
 .area_ct1{
