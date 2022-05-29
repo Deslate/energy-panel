@@ -20,6 +20,16 @@ scp -r ./build Panel:/home/liu/frontend/
 * install `python` 3.8+ on yourv server ( for Panel, already installed )
 * pip install `django` on yourv server ( for Panel, already installed )
 
+
+Login Server
+
+```
+ssh Panel
+```
+
+on server, create or retrive the screen "backend":
+
+
 ```
 # For the first time you use the screen
 screen -S backend
