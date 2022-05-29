@@ -1,13 +1,13 @@
 import React from "react";
 import DigitDisplay from "./area_templates/digit_display/digit_display";
 
-const Area4 = ({value}) => {
+const Area6 = ({value}) => {
     return (
         <DigitDisplay
-            title={"当前电网买电量 P_grid"}
-            number={value!==null?value:'LOADING'}
+            title={"当前排放因子（CEF）"}
+            number={value?value*10:'LOADING'}
         />
     )
 }
 
-export default Area4
+export default Area6

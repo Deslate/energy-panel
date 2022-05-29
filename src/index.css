@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+@font-face {
+  font-family: 'ZhengQingKeLengKuTi';
+  src: url('./fonts/ZhengQingKeLengKuTi/ZhengQingKeLengKuTi-2.ttf');
+}
+
+@font-face {
+  font-family: 'led16sgmnt2';
+  src: url('./fonts/Led16sgmnt2/led16sgmnt2-Regular-2.ttf');
+}

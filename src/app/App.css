@@ -1,4 +1,8 @@
-@import "./grid.css";
+
+@import '~antd/dist/antd.dark.css';
+
+@import url('http://fonts.cdnfonts.com/css/technology');
+
 
 html, body, #root, .App{
   height: 100%;
@@ -8,7 +12,20 @@ html, body, #root, .App{
   text-align: center;
 }
 
+h2{ color: white }
+
 .area_l1 {
   display: grid;
   grid-template-rows: 20px 1fr 3fr;
+}
+
+.area_layout h2{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.h1{
+  color: rgb(132, 243, 255);
 }

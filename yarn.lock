@@ -4878,6 +4878,36 @@ earcut@^2.2.1, earcut@^2.2.2:
   resolved "https://registry.npmmirror.com/earcut/-/earcut-2.2.3.tgz#d44ced2ff5a18859568e327dd9c7d46b16f55cf4"
   integrity sha512-iRDI1QeCQIhMCZk48DRDMVgQSSBDmbzzNhnxIo+pwx3swkfjMh6vh0nWLq1NdvGHLKH6wIrAM3vQWeTj6qeoug==
 
+echarts-for-react@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.npmjs.org/echarts-for-react/-/echarts-for-react-3.0.2.tgz#ac5859157048a1066d4553e34b328abb24f2b7c1"
+  integrity sha512-DRwIiTzx8JfwPOVgGttDytBqdp5VzCSyMRIxubgU/g2n9y3VLUmF2FK7Icmg/sNVkv4+rktmrLN9w22U2yy3fA==
+  dependencies:
+    fast-deep-equal "^3.1.3"
+    size-sensor "^1.0.1"
+
+echarts-react@^0.0.1-beta:
+  version "0.0.1-beta"
+  resolved "https://registry.npmjs.org/echarts-react/-/echarts-react-0.0.1-beta.tgz#30b78a4ba22fd22df98f22647030ea445e373610"
+  integrity sha1-MLeKS6Iv0i35jyJkcDDqRF43NhA=
+  dependencies:
+    echarts "^2.2.8"
+
+echarts@^2.2.8:
+  version "2.2.8"
+  resolved "https://registry.npmjs.org/echarts/-/echarts-2.2.8.tgz#81a86694c4e5e917e6fdd39d52989002a685f5e7"
+  integrity sha1-gahmlMTl6Rfm/dOdUpiQAqaF9ec=
+  dependencies:
+    zrenderjs "~2.1.1-amd-beta1"
+
+echarts@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.npmjs.org/echarts/-/echarts-5.3.2.tgz#0a7b3be8c48a48b2e7cb1b82121df0c208d42d2c"
+  integrity sha512-LWCt7ohOKdJqyiBJ0OGBmE9szLdfA9sGcsMEi+GGoc6+Xo75C+BkcT/6NNGRHAWtnQl2fNow05AQjznpap28TQ==
+  dependencies:
+    tslib "2.3.0"
+    zrender "5.3.1"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmmirror.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -10520,6 +10550,11 @@ tsconfig-paths@^3.12.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
+tslib@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.3.0.tgz#803b8cdab3e12ba581a4ca41c8839bbb0dacb09e"
+  integrity sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==
+
 tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.14.1"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
@@ -11275,3 +11310,15 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmmirror.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zrender@5.3.1:
+  version "5.3.1"
+  resolved "https://registry.npmjs.org/zrender/-/zrender-5.3.1.tgz#fa8e63ac7e719cfd563831fe8c42a9756c5af384"
+  integrity sha512-7olqIjy0gWfznKr6vgfnGBk7y4UtdMvdwFmK92vVQsQeDPyzkHW1OlrLEKg6GHz1W5ePf0FeN1q2vkl/HFqhXw==
+  dependencies:
+    tslib "2.3.0"
+
+zrenderjs@~2.1.1-amd-beta1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/zrenderjs/-/zrenderjs-2.1.1.tgz#e6ecf8d8c48e1f7af3f487f17d7e59e507a832cb"
+  integrity sha1-5uz42MSOH3rz9IfxfX5Z5QeoMss=

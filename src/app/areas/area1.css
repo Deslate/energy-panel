@@ -1,0 +1,21 @@
+.Control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.Control h2 {
+    font-size: 16px;
+}
+
+.Control .digit {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    font-family: 'led16sgmnt2';
+
+    margin-top: 10px;
+}

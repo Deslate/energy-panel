@@ -1,4 +1,4 @@
-.FilledCurve{
+.BatteryPanel{
     text-align: left;
     height: 100%;
     width: 100%;
@@ -8,7 +8,7 @@
     justify-content: stretch;
 }
 
-.graph_container{
+.bullet_container{
     text-align: left;
     align-self: center;
     height: calc(100% - 15px);

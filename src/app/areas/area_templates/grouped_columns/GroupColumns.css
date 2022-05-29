@@ -1,4 +1,4 @@
-.FilledCurve{
+.GroupColumns{
     text-align: left;
     height: 100%;
     width: 100%;
@@ -19,3 +19,4 @@
     flex-direction: column;
     justify-content: stretch;
 }
+

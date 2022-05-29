@@ -8,7 +8,9 @@ const DigitDisplay = ({
     
     return (
         <div className="DigitDisplay">
-            <span>{number}</span>
+            <div className="span_container">
+                <span>{typeof(number)==="string"?number:number.toFixed(2)}</span>
+            </div>
             <h2>{title}</h2>
         </div>
     )

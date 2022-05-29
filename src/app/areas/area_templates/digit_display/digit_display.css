@@ -9,8 +9,12 @@
 .DigitDisplay span{
     text-align: center;
     width: 100%;
-    font-size: 30px;
+    font-size: 40px;
+    font-family: 'led16sgmnt2';
+}
 
+.DigitDisplay > .span_container {
+    padding-right: 10px;
 }
 
 .DigitDisplay h2{
