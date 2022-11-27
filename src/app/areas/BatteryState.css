@@ -1,0 +1,11 @@
+.BatteryState{
+
+}
+
+.BatteryState > h2 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+}

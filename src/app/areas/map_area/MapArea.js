@@ -210,7 +210,7 @@ const MapArea = ({ bchList ,loadList,PV_PowerList}) => {
                 },
                 data: ['储能设备', '负荷设备', '光伏设备'],
             },
-            series: [{
+            /*series: [{
                 name: 'center',
                 type: 'effectScatter',
                 coordinateSystem: 'geo',
@@ -347,6 +347,7 @@ const MapArea = ({ bchList ,loadList,PV_PowerList}) => {
                 },
                 data: PV_PowerLine.slice(0, PV_PowerLine.length * rate),
             }],
+            */
             dataZoom: []
         })
 

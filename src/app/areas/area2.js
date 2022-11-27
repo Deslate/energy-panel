@@ -40,12 +40,11 @@ const Area2 = ({data, time}) => {
 
     return ( 
         <div className="FilledCurve area_layout" >
-            <h2 > {"当前供能情况"} </h2>
+            <h2 > {"节约成本"} </h2>
             <div className="graph_container" >
-                <p>当前负荷 <span>{load}</span> kW</p>
-                <p>储能供电 <span>{dis}</span> kW</p>
-                <p>光伏供电 <span>{pv}</span> kW</p>
-                <p>电网供电 <span>{-(parseFloat(dis) + parseFloat(pv) - parseFloat(load)).toFixed(2)}</span> kW</p>
+                <p>年度节省 <span>￥{load}</span></p>
+                <p>月度节省 <span>￥{dis}</span></p>
+                <p>当日节省 <span>￥{pv}</span></p>
             </div>
         </div>
     )

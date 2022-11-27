@@ -7,11 +7,12 @@ const Area7 = ({data, time}) => {
 
     return (
         <FilledCurve
-            title={"24小时内总负载曲线"}
+            title={"碳排放"}
             data={data}
             time={time}
             unit = {"KW"}
             keyname = {"负荷"}
+            display_title={"碳排放量"}
         />
     )
 }

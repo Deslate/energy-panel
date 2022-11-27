@@ -1,6 +1,7 @@
 import React from "react";
 import "./FilledCurve.css"
 import { Area } from '@ant-design/plots';
+import DigitDisplay from "../digit_display/digit_display";
 
 const FilledCurve = ({
     title,
@@ -8,6 +9,8 @@ const FilledCurve = ({
     time,
     unit,
     keyname,
+    display_horizontal,
+    display_title,
 }) => {
 
     const [ _data, setData ] = React.useState(data)
@@ -69,8 +72,9 @@ const FilledCurve = ({
 
     return (
         <div className = "FilledCurve area_layout" ref = { container } >
-            <h2> { title } </h2> 
+            {title?<h2> { title } </h2>:null }
             <div className = "graph_container" >
+                <DigitDisplay number={66666} title={display_title} horizontal={display_horizontal}/>
                 <Area {...config } xAxis={{
                     label:{formatter:(text, index, total)=>{
                         let t = parseInt(text)

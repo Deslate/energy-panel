@@ -7,11 +7,13 @@ const Area3 = ({ data, time }) => {
     //console.log(data)
 
     return (
-    <FilledCurve title = { "24小时CEF变化" }
+    <FilledCurve title = { "全系统减排" }
         data = { data.map(i=>({...i, value:i.value*10})) }
         time = { time }
         unit = {"gCO2/kWh"}
         keyname = {"CEF"}
+        display_title={"累计减排"}
+        display_horizontal={true}
     />
     )
 }
