@@ -92,7 +92,11 @@ function App() {
                 </div>
             </div>
 
-            <BatteryState shown={show_battery_detail}/>
+            {/* <BatteryState shown={show_battery_detail} setShown={setShowBatteryDetail} item={{
+                data1: data.Cef,
+                data2: data.Cef,
+                data3: data.Cef,
+            }}/> */}
         </div>
     );
 }

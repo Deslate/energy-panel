@@ -33,7 +33,7 @@ const TitleArea = ({time, setTime}) => {
 
             <div className="TitleAreaLeftRightCenter">
                 <div className="TitleAreaLeftRightCenterRect"></div>
-                <div class="TitleAreaLeftCenterTriangle"></div>
+                <div className="TitleAreaLeftCenterTriangle"></div>
             </div>
 
             <div className="TitleAreaCenter">
@@ -42,7 +42,7 @@ const TitleArea = ({time, setTime}) => {
 
             <div className="TitleAreaLeftRightCenter">
                 <div className="TitleAreaLeftRightCenterRect"></div>
-                <div class="TitleAreaRightCenterTriangle"></div>
+                <div className="TitleAreaRightCenterTriangle"></div>
             </div>
 
             <div className="TitleAreaRight">
