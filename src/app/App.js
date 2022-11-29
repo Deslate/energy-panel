@@ -31,7 +31,7 @@ function App() {
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
 
-    const [ show_battery_detail, setShowBatteryDetail ] = React.useState(true)
+    const [ show_battery_detail, setShowBatteryDetail ] = React.useState(false)
 
     React.useEffect(()=>{
         let flag = true;
@@ -92,11 +92,11 @@ function App() {
                 </div>
             </div>
 
-            {/* <BatteryState shown={show_battery_detail} setShown={setShowBatteryDetail} item={{
+            <BatteryState shown={show_battery_detail} setShown={setShowBatteryDetail} item={{
                 data1: data.Cef,
                 data2: data.Cef,
                 data3: data.Cef,
-            }}/> */}
+            }}/>
         </div>
     );
 }

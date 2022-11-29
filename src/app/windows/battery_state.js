@@ -1,20 +1,7 @@
 import './battery_state_grid.css'
-import Area1 from '../areas/area1';
-import Area4 from '../areas/area4';
-import TitleArea from '../areas/title_area/TitleArea';
-import MapArea from '../areas/map_area/MapArea.js';
-import Area8 from '../areas/area8';
-import Area9 from '../areas/area9';
-import Area3 from '../areas/area3';
-import Area2 from '../areas/area2';
-import Area5 from '../areas/area5';
-import Area6 from '../areas/area6';
-import Area7 from '../areas/area7';
 import React from 'react';
 import { API } from '../const.js'
-import { find,findAll } from '../data_processing.js'
 import { message } from 'antd';
-import Area10 from '../areas/area10';
 
 import configure_icon from './configure.svg'
 import close_icon from './close.svg'
@@ -24,7 +11,6 @@ import state1_icon from '../areas/state1.svg'
 import state2_icon from '../areas/state2.svg'
 import state3_icon from '../areas/state3.svg'
 import { Area } from '@ant-design/charts';
-import FilledCurve from '../areas/area_templates/filled_curve/FilledCurve';
 
 const CircleProgress = ({progress}) => {
     return (
