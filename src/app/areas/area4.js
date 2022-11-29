@@ -10,6 +10,8 @@ const Area4 = ({data, time}) => {
             unit = {"gCO2/kWh"}
             keyname = {"CEF"}
             display_title={"当前出力"}
+            layout={'leftbottom'}
+            number={19230}
         />
     )
 }

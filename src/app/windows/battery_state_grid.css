@@ -1,0 +1,61 @@
+
+.BatteryStateWindow{
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    height: calc(100% - 140px);
+    width: calc(100% - 36px);
+}
+
+.BatteryStateWindow.area {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+
+    display: flex;
+
+    /* border:2px inset #6e748be8; */
+    
+    background:
+    linear-gradient(to left, #454e5e, #454e5e) left top no-repeat, 
+    linear-gradient(to bottom, #454e5e, #454e5e) left top no-repeat, 
+    linear-gradient(to left, #454e5e, #454e5e) right top no-repeat,
+    linear-gradient(to bottom, #454e5e, #454e5e) right top no-repeat, 
+    linear-gradient(to left, #454e5e, #454e5e) left bottom no-repeat,
+    linear-gradient(to bottom, #454e5e, #454e5e) left bottom no-repeat,
+    linear-gradient(to left, #454e5e, #454e5e) right bottom no-repeat,
+    linear-gradient(to left, #454e5e, #454e5e) right bottom no-repeat;
+    background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px;  
+
+    box-shadow:
+    inset 0px 0px 10px 10px rgba(255,255,255,.03),
+    0px 0px 3px 3px rgba(255,255,255,.02);
+}
+
+.BatteryStateWindow .layout{
+    margin-top: 2px;
+    margin-left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: #252832;
+}
+
+
+.BatteryStateWindow > .area > h2 {
+    /* 电池状态 */
+    position: absolute;
+    width: 114px;
+    height: 34px;
+    left: 67px;
+    top: 230px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #53BDDF;
+}

@@ -139,3 +139,23 @@
 .TitleLeft button.start{
     margin-left: 20px;
 }
+
+.TitleLeft_avatar{
+    width: 35px;
+    height: 35px;
+    margin-left: 15px;
+    background-color: #666688;
+}
+
+.TitleLeft_id{
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 17.5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #B4B9CC;
+}

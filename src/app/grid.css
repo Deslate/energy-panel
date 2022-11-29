@@ -1,8 +1,8 @@
 
 .grid-container {
-    height: calc(100% - 20px);
+    height: 100%;
     display: grid;
-    grid-template-columns: 10px 1fr 2fr 1fr 10px;
+    grid-template-columns: 10px 1fr 2.5fr 1fr 10px;
     grid-template-rows: 10px 80px 3fr 2fr 10px;
     grid-gap: 10px;
     background-color: #252832;
@@ -70,6 +70,9 @@
 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 20px 1fr;
+
+    padding-left: 10px;
+    padding-right: 20px;
 }
 
 .grid-container .row, .grid-container .col {
@@ -146,3 +149,21 @@
     grid-column-start: 3;
     grid-column-end: 4;
 } */
+
+
+.area_ct{
+    height: 17px;
+    margin-left: 8px;
+    margin-top: 12px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #53BDDF;
+}

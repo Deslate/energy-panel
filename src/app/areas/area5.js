@@ -10,6 +10,9 @@ const Area5 = ({data, time}) => {
             unit = {"gCO2/kWh"}
             keyname = {"CEF"}
             display_title={"累计减排"}
+            layout={'lefttop'}
+            number={19230}
+            fill
         />
     )
 }

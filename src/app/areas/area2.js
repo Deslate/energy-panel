@@ -1,6 +1,7 @@
 import React from "react";
 import demo_data from "../demo_data";
 import Columns from "./area_templates/columns/Columns";
+import './area2.css'
 
 const Area2 = ({data, time}) => {
 
@@ -40,11 +41,30 @@ const Area2 = ({data, time}) => {
 
     return ( 
         <div className="FilledCurve area_layout" >
-            <h2 > {"节约成本"} </h2>
-            <div className="graph_container" >
-                <p>年度节省 <span>￥{load}</span></p>
-                <p>月度节省 <span>￥{dis}</span></p>
-                <p>当日节省 <span>￥{pv}</span></p>
+            <h3 className="area2_title" > {"节约成本"} </h3>
+            <div style={{
+                display:'flex',
+                flexDirection:'column',
+                alignItems: 'flex-start',
+            }} >
+                <div className="area2-title1">年度节省 </div>
+                <div className="area2-value1">￥{10928.1}</div>
+                
+            </div>
+            <div style={{
+                display:'flex',
+                flexDirection:'row',
+                alignItems:'center',
+                width: '100%',
+            }}>
+                <div>
+                    <div className="area2-title2">月度节省 </div>
+                    <div className="area2-value2">￥{198.2}</div>
+                </div>
+                <div>
+                    <div className="area2-title3">当日节省 </div>
+                    <div className="area2-value3">￥{29.94}</div>
+                </div>
             </div>
         </div>
     )

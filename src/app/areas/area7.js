@@ -13,6 +13,8 @@ const Area7 = ({data, time}) => {
             unit = {"KW"}
             keyname = {"负荷"}
             display_title={"碳排放量"}
+            display_horizontal={true}
+            number={19230}
         />
     )
 }

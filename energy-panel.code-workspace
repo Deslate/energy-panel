@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://ssh-remote+ween-www/home/www/energy-panel"
+		}
+	],
+	"remoteAuthority": "ssh-remote+ween-www",
+	"settings": {}
+}

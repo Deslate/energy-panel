@@ -1,0 +1,77 @@
+
+/* 年度节省 */
+.area2-title1, .area2-title2, .area2-title3{
+    margin-left: 18px;
+    width: 48px;
+    height: 19px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #B4B9CC;
+}
+
+/* ¥10928.1 */
+.area2-value1{
+    width: 174px;
+    height: 39px;
+    margin-left: 12px;
+
+    font-family: 'Iceberg', 'ZhengQingKeLengKuTi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 49px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #D1BF5E;
+}
+
+.area2-value2, .area2-value3{
+    width: 80px;
+    height: 30px;
+    padding-left: 18px;
+    max-width: 50%;
+    width: 50%;
+
+    font-family: 'Iceberg', 'ZhengQingKeLengKuTi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.FilledCurve{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 10%;
+}
+
+.area2_title{
+    margin-left: 18px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #53BDDF;
+}

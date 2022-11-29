@@ -24,7 +24,10 @@ const TitleArea = ({time, setTime}) => {
         <div className="TitleArea">
             <div className="TitleAreaLeft">
                 <div className="TitleLeft">
-                    <button className="start">时间：{time}:{new Date().getMinutes().toString().padStart(2, '0')}</button>
+                    <div className="TitleLeft_avatar">
+
+                    </div>
+                    <button className="TitleLeft_id">Some Name</button>
                 </div>
             </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./FilledCurve.css"
-import { Area } from '@ant-design/plots';
+import { Area, Line } from '@ant-design/plots';
 import DigitDisplay from "../digit_display/digit_display";
 
 const FilledCurve = ({
@@ -11,6 +11,9 @@ const FilledCurve = ({
     keyname,
     display_horizontal,
     display_title,
+    layout,
+    number=0,
+    fill
 }) => {
 
     const [ _data, setData ] = React.useState(data)
@@ -71,11 +74,25 @@ const FilledCurve = ({
     }, [container])
 
     return (
-        <div className = "FilledCurve area_layout" ref = { container } >
+        <div className = {`FilledCurve${layout?'_'+layout:''} area_layout`} ref = { container } >
             {title?<h2> { title } </h2>:null }
+            <div className="FilledCurve_digit">
+                <DigitDisplay number={''+number} title={display_title} horizontal={display_horizontal}/>
+            </div>
             <div className = "graph_container" >
-                <DigitDisplay number={66666} title={display_title} horizontal={display_horizontal}/>
-                <Area {...config } xAxis={{
+                {fill?(
+                    <Area {...config } xAxis={{
+                        label:{formatter:(text, index, total)=>{
+                            let t = parseInt(text)
+                            let _time = time===undefined?0:time
+                            for (let i=0; i<_time+1; i++){
+                                t =  t===23? 1: t+1
+                            }
+                            return t;
+                        }}
+                    }}/>
+                ):(
+                    <Line {...config } xAxis={{
                     label:{formatter:(text, index, total)=>{
                         let t = parseInt(text)
                         let _time = time===undefined?0:time
@@ -84,7 +101,8 @@ const FilledCurve = ({
                         }
                         return t;
                     }}
-                }}/>
+                    }}/>
+                )}
             </div>
         </div>
     )

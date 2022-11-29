@@ -9,7 +9,7 @@ const DigitDisplay = ({
     
     return (
         <div className={horizontal?"DigitDisplay_row":"DigitDisplay"}>
-            <h2>{title}</h2>
+            <h3>{title}</h3>
             <div className="span_container">
                 <span>{typeof(number)==="string"?number:number.toFixed(2)}</span>
             </div>

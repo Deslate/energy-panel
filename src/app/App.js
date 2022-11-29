@@ -16,6 +16,7 @@ import { API } from './const.js'
 import { find,findAll } from './data_processing.js'
 import { message } from 'antd';
 import Area10 from './areas/area10';
+import BatteryState from './windows/battery_state';
 
 function App() {
 
@@ -29,6 +30,9 @@ function App() {
     const [ data_CEF_cache, setDataCEFCache ] = React.useState(null)
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
+
+    const [ show_battery_detail, setShowBatteryDetail ] = React.useState(true)
+
     React.useEffect(()=>{
         let flag = true;
         switch(mode){
@@ -83,10 +87,12 @@ function App() {
                     {/* <div className="area area_r2"><Area9 data={data.PV_power} time={time}/></div> */}
                     {/* <div className="area area_r2"><Area8 P_ch={data.P_ch} P_dis={data.P_dis} B_ch={data.B_ch} B_dis={data.B_dis} time={time}/></div> */}
                     <div className="area area_r3"><Area7 data={data.Total_load} time={time}/></div>
-                    <div className="area area_r2"><Area10 data={data.Total_load} time={time}/></div>
+                    <div className="area area_r2"><Area10 data={data.Total_load} time={time} setShowBatteryDetail={setShowBatteryDetail}/></div>
                     
                 </div>
             </div>
+
+            <BatteryState shown={show_battery_detail}/>
         </div>
     );
 }

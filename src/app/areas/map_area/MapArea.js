@@ -187,8 +187,8 @@ const MapArea = ({ bchList ,loadList,PV_PowerList}) => {
                 zoom: zoom,
                 roam: true,
                 itemStyle: {
-                    borderColor: "#333b42",
-                    areaColor: '#333b42',
+                    borderColor: "#53BDDF",
+                    areaColor: '#53BDDF88',
 
                 },
 

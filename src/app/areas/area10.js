@@ -2,9 +2,13 @@ import React from "react";
 import demo_data from "../demo_data";
 import FilledCurve from "./area_templates/filled_curve/FilledCurve";
 
+import state1_icon from './state1.svg'
+import state2_icon from './state2.svg'
+import state3_icon from './state3.svg'
+
 import './BatteryState.css'
 
-const Area10 = ({ time}) => {
+const Area10 = ({ time, setShowBatteryDetail }) => {
 
     const data = [
         {name:'一号电池组', state:1, remain: 0.4},
@@ -14,14 +18,30 @@ const Area10 = ({ time}) => {
 
     return (
         <div className="BatteryState area_layout">
-            <div>
-                <h2>电池状态</h2>
-                {data.map(item=>(
-                    <div>
+            <h2>电池状态</h2>
+            <div className="BatteryList">
+            {data.map(item=>(
+                <div className="BatteryStateItem" onClick={()=>setShowBatteryDetail(true)}>
+                    <div className="BatteryStateItem_line1">
                         <span>{item.name}</span>
-                        
+                        <div className="BatteryState_icon">
+                            {item.state===1?(
+                                <img src={state1_icon}/>
+                            ):item.state===2?(
+                                <img src={state2_icon}/>
+                            ):item.state===3?(
+                                <img src={state3_icon}/>
+                            ):null}
+                        </div>
                     </div>
-                ))}
+
+                    <div className="BatteryState_bar">
+                        <div className="BatteryState_bar_progress" style={{width:(item.remain * 100) + '%'}}/>
+                    </div>
+
+                    <div></div>
+                </div>
+            ))}
             </div>
         </div>
     )

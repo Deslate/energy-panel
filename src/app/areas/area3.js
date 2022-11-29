@@ -14,6 +14,8 @@ const Area3 = ({ data, time }) => {
         keyname = {"CEF"}
         display_title={"累计减排"}
         display_horizontal={true}
+        number={19230}
+        fill
     />
     )
 }
