@@ -1,6 +1,4 @@
 import React from "react";
-import demo_data from "../demo_data";
-import FilledCurve from "./area_templates/filled_curve/FilledCurve";
 
 import state1_icon from './state1.svg'
 import state2_icon from './state2.svg'
@@ -21,7 +19,10 @@ const Area10 = ({ time, setShowBatteryDetail }) => {
             <h2>电池状态</h2>
             <div className="BatteryList">
             {data.map(item=>(
-                <div className="BatteryStateItem" onClick={()=>setShowBatteryDetail(true)}>
+                <div
+                    className="BatteryStateItem"
+                    onClick={()=>setShowBatteryDetail(true)}
+                >
                     <div className="BatteryStateItem_line1">
                         <span>{item.name}</span>
                         <div className="BatteryState_icon">

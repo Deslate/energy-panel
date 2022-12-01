@@ -17,6 +17,8 @@ import { find,findAll } from './data_processing.js'
 import { message } from 'antd';
 import Area10 from './areas/area10';
 import BatteryState from './windows/battery_state';
+import PvState from './windows/pv_state';
+import CO2State from './windows/co2_state';
 
 function App() {
 
@@ -32,6 +34,8 @@ function App() {
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
 
     const [ show_battery_detail, setShowBatteryDetail ] = React.useState(false)
+    const [ show_pv_detail, setShowPvDetail ] = React.useState(false)
+    const [ show_co2_detail, setShowCO2Detail ] = React.useState(false)
 
     React.useEffect(()=>{
         let flag = true;
@@ -75,7 +79,7 @@ function App() {
                     <div className="area area_l2"><Area2 data={data} time={time}/></div>  
                     <div className="area area_l3"><Area3 data={data.Cef} time={time}/></div>
                 </div>
-                <div className="area row row_ct">
+                <div className="area row row_ct" onClick={()=>{console.log("shit");setShowPvDetail(true)}}>
                     <div className='area_ct'>PV</div>
                     <div className="area_ct1"><Area4 data={data.Cef} time={time}/></div>
                     <div className="area_ct2"><Area5 data={data.Cef} time={time}/></div>
@@ -86,7 +90,7 @@ function App() {
                     
                     {/* <div className="area area_r2"><Area9 data={data.PV_power} time={time}/></div> */}
                     {/* <div className="area area_r2"><Area8 P_ch={data.P_ch} P_dis={data.P_dis} B_ch={data.B_ch} B_dis={data.B_dis} time={time}/></div> */}
-                    <div className="area area_r3"><Area7 data={data.Total_load} time={time}/></div>
+                    <div className="area area_r3" onClick={()=>setShowCO2Detail(true)}><Area7 data={data.Total_load} time={time}/></div>
                     <div className="area area_r2"><Area10 data={data.Total_load} time={time} setShowBatteryDetail={setShowBatteryDetail}/></div>
                     
                 </div>
@@ -97,6 +101,20 @@ function App() {
                 data2: data.Cef,
                 data3: data.Cef,
             }}/>
+
+            <PvState shown={show_pv_detail} setShown={setShowPvDetail} item={{
+                data1: data.Cef,
+                data2: data.Cef,
+                data3: data.Cef,
+            }}/>
+
+            <CO2State shown={show_co2_detail} setShown={setShowCO2Detail} item={{
+                data1: data.Cef,
+                data2: data.Cef,
+                data3: data.Cef,
+                data4: data.Cef,
+            }}/>
+
         </div>
     );
 }

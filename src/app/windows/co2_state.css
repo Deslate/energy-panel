@@ -1,0 +1,206 @@
+
+.CO2StateWindow{
+    position: fixed;
+    left: 18px;
+    bottom: 18px;
+    height: calc(100% - 140px);
+    width: calc(100% - 36px);
+}
+
+.CO2StateWindow div{
+    /* background-color: #fff2;
+    border: #fff4 solid 1px; */
+}
+
+
+/* 用于在弹窗周围画出框 */
+.CO2StateWindow.area {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+
+    /* border:2px inset #6e748be8; */
+    
+    background:
+    linear-gradient(to left, #454e5e, #454e5e) left top no-repeat, 
+    linear-gradient(to bottom, #454e5e, #454e5e) left top no-repeat, 
+    linear-gradient(to left, #454e5e, #454e5e) right top no-repeat,
+    linear-gradient(to bottom, #454e5e, #454e5e) right top no-repeat, 
+    linear-gradient(to left, #454e5e, #454e5e) left bottom no-repeat,
+    linear-gradient(to bottom, #454e5e, #454e5e) left bottom no-repeat,
+    linear-gradient(to left, #454e5e, #454e5e) right bottom no-repeat,
+    linear-gradient(to left, #454e5e, #454e5e) right bottom no-repeat;
+    background-size: 2px 20px, 20px 2px, 2px 20px, 20px 2px;  
+
+    box-shadow:
+    inset 0px 0px 10px 10px rgba(255,255,255,.03),
+    0px 0px 3px 3px rgba(255,255,255,.02);
+}
+
+/* 整个弹窗内容区域 */
+.CO2StateWindow .layout{
+    margin-top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background-color: #252832;
+}
+
+/* 弹窗的Header里的标题 */
+.CO2StateWindow > .layout h2 {
+    /* 电池状态 */
+    margin-left: 30px;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #53BDDF;
+}
+
+/* 整个Header区域 */
+.CO2StateWindow .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* 右上角的两个按钮 */
+.CO2StateWindow .header-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.CO2StateWindow .header-right-button{
+    margin-right: 30px;
+}
+
+.CO2StateWindow .header-right-button img{
+    width: 20px;
+    height: 20px;
+}
+
+.CO2StateWindow .header-right-button .img_close{
+    width: 17px;
+    height: 17px;
+}
+
+
+
+
+.CO2StateWindow .line2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 30px, 1fr, 30px, 1fr;
+    height: calc(100% - 150px);
+    width: calc(100vw - 240px);
+
+    margin-top: 50px;
+    /* margin-bottom: 150px; */
+    margin-left: 100px;
+    margin-right: 100px;
+
+    column-gap: 50px;
+    row-gap: 20px;
+}
+
+.CO2StateWindow .line2-1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    max-width: 100%;
+}
+
+.CO2StateWindow .line2-2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: 100%;
+    max-width: 100%;
+}
+
+.CO2StateWindow .line2-3{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 100%;
+    max-width: 100%;
+}
+
+.CO2StateWindow .line2-4{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    height: 100%;
+    max-width: 100%;
+}
+
+.CO2StateWindow .line2-a{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.CO2StateWindow .line2-b{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 100%;
+    width: 100%;
+}
+
+.CO2StateWindow .line2-c{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 100%;
+    width: 100%;
+}
+
+.CO2StateWindow .line2-d{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    height: 100%;
+    width: 100%;
+}
+
+.CO2StateWindow .line2-a, .CO2StateWindow .line2-b, .CO2StateWindow .line2-c, .CO2StateWindow .line2-d{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+}
+
+
+
+
+.circle-progress-background, .circle-progress-content{
+    transform-origin: center;
+    transform: rotate(122.5deg);
+}

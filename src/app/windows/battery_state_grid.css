@@ -291,6 +291,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30px, 1fr;
     height: calc(100% - 400px);
+    width: calc(100vw - 160px);
 
     margin-top: 50px;
     /* margin-bottom: 150px; */
@@ -307,6 +308,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     height: 100%;
+    max-width: 100%;
 }
 
 .BatteryStateWindow .line2-2{
@@ -315,6 +317,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     height: 100%;
+    max-width: 100%;
 }
 
 .BatteryStateWindow .line2-3{
@@ -323,6 +326,7 @@
     grid-row-start: 2;
     grid-row-end: 3;
     height: 100%;
+    max-width: 100%;
 }
 
 .BatteryStateWindow .line2-a{
@@ -331,22 +335,25 @@
     grid-row-start: 1;
     grid-row-end: 2;
     height: 100%;
+    max-width: 100%;
 }
 
-.BatteryStateWindow .line2-a{
+.BatteryStateWindow .line2-b{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
     height: 100%;
+    max-width: 100%;
 }
 
-.BatteryStateWindow .line2-a{
+.BatteryStateWindow .line2-c{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     height: 100%;
+    max-width: 100%;
 }
 
 .BatteryStateWindow .line2-a, .BatteryStateWindow .line2-b, .BatteryStateWindow .line2-c{
