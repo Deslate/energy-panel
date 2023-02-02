@@ -28,7 +28,7 @@ const FilledCurve = ({
         //     return {...i, t:t};
         // })
         // _data.sort(function(a,b){return a.t-b.t})
-        _data = data
+        let _data = data
         setData(_data)
     },[time, data])
 
