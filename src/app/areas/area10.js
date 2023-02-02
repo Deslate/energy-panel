@@ -22,6 +22,7 @@ const Area10 = ({ time, setShowBatteryDetail }) => {
                 <div
                     className="BatteryStateItem"
                     onClick={()=>setShowBatteryDetail(true)}
+                    key={item.name}
                 >
                     <div className="BatteryStateItem_line1">
                         <span>{item.name}</span>

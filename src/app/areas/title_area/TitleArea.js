@@ -37,7 +37,7 @@ const TitleArea = ({time, setTime}) => {
             </div>
 
             <div className="TitleAreaCenter">
-                <div className="Title">Virtual Power Plant UI</div>
+                <div className="Title">Virtual Power Plant UI 666</div>
             </div>
 
             <div className="TitleAreaLeftRightCenter">

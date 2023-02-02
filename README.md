@@ -1,15 +1,12 @@
 # How To Run
 
-
 ## Frontend
 
 * Install node.js and use npm (inside node.js) install yarn
 * set server SSH hostname to Panel ( For privacy concern, not listed here )
 
 ```
-cd /path/to/energy-panel/
-yarn build
-scp -r ./build Panel:/home/liu/frontend/
+scp -r ./build ween-Versee:/home/www/energy-panel/
 ```
 
 ## Backend
@@ -20,7 +17,6 @@ scp -r ./build Panel:/home/liu/frontend/
 * install `python` 3.8+ on yourv server ( for Panel, already installed )
 * pip install `django` on yourv server ( for Panel, already installed )
 
-
 Login Server
 
 ```
@@ -28,7 +24,6 @@ ssh Panel
 ```
 
 on server, create or retrive the screen "backend":
-
 
 ```
 # For the first time you use the screen
@@ -47,7 +42,6 @@ python manage.py runserver 8000
 ## URL redirection
 
 * Used nginx. See `/home/liu/backend/nginx.conf`
-
 
 ## Core Algorithm
 

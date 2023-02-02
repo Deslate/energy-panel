@@ -19,15 +19,16 @@ const FilledCurve = ({
     const [ _data, setData ] = React.useState(data)
 
     React.useEffect(()=>{
-        let _data = data.map(i=>{
-            let _time = time===undefined?0:time;
-            let t = parseInt(i.t)
-            for (let i=0; i<23-_time+1; i++){
-                t =  t===23? 0: t+1
-            }
-            return {...i, t:t};
-        })
-        _data.sort(function(a,b){return a.t-b.t})
+        // let _data = data.map(i=>{
+        //     let _time = time===undefined?0:time;
+        //     let t = parseInt(i.t)
+        //     for (let i=0; i<23-_time+1; i++){
+        //         t =  t===23? 0: t+1
+        //     }
+        //     return {...i, t:t};
+        // })
+        // _data.sort(function(a,b){return a.t-b.t})
+        _data = data
         setData(_data)
     },[time, data])
 

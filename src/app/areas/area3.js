@@ -6,6 +6,8 @@ const Area3 = ({ data, time }) => {
 
     //console.log(data)
 
+    
+
     return (
     <FilledCurve title = { "全系统减排" }
         data = { data.map(i=>({...i, value:i.value*10})) }

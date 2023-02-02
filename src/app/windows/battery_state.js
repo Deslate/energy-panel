@@ -107,10 +107,14 @@ function BatteryState({shown, setShown, item }) {
                 setLoading(false)
                 hide()
                 if(res.status==200){
-                    return res.json()
+                    try{
+                        return res.json()
+                    }catch{
+                        return
+                    }
                 }else{
                     message.error('Server Down')
-                    return
+                    return 
                 }
             })
             .then(_data=>{if(_data){
