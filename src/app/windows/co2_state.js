@@ -16,7 +16,7 @@ import { Area, Line } from '@ant-design/charts';
 
 const FilledCurveComponent = ({data, fill}) => {
     const config = {
-        data: data,
+        data: data.map((i,index)=>({t:index,value:i.a})),
         xField: 't',
         yField: 'value',
         areaStyle: () => {
@@ -79,6 +79,7 @@ function CO2State({shown, setShown, item }) {
     const [ data_CEF_cache, setDataCEFCache ] = React.useState(null)
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
+    const [ carbon_data, setBatteryData] = React.useState([])
     
     React.useEffect(()=>{
         let flag = true;
@@ -112,12 +113,21 @@ function CO2State({shown, setShown, item }) {
         }
     },[mode])
 
+    React.useEffect(()=>{
+        fetch('api/carbon/').then(res=>{
+            return res.json()
+        }).then(data=>{
+            console.log(data)
+            setBatteryData(data)
+        })
+    },[])
+
     return (
         <div className="CO2StateWindow area" hidden={!shown}>
             <div className='layout'>
 
                 <div className="header">
-                    <h2>PV</h2>
+                    <h2>碳排放</h2>
                     <div className="header-right">
                         <div className="header-right-button">
                             <img src={configure_icon}></img>
@@ -147,16 +157,16 @@ function CO2State({shown, setShown, item }) {
                     </div>
 
                     <div className='line2-1'>
-                        <FilledCurveComponent data={item.data1||[]} />
+                        <FilledCurveComponent data={carbon_data.load_info||[]} />
                     </div>
                     <div className='line2-2'>
-                        <FilledCurveComponent data={item.data2||[]} />
+                        <FilledCurveComponent data={carbon_data.carbon_intensity||[]} />
                     </div>
                     <div className='line2-3'>
-                        <FilledCurveComponent data={item.data3||[]} />
+                        <FilledCurveComponent data={carbon_data.carbon_hourly||[]} />
                     </div>
                     <div className='line2-4'>
-                        <FilledCurveComponent data={item.data4||[]} fill />
+                        <FilledCurveComponent data={carbon_data.carbon_sum||[]} fill />
                     </div>
                 </div>
 

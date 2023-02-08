@@ -139,8 +139,6 @@ function BatteryState({shown, setShown, item }) {
         })
     },[])
 
-    
-
     return (
         <div className="BatteryStateWindow area" hidden={!shown}>
             <div className='layout'>

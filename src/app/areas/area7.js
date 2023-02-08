@@ -14,13 +14,10 @@ const Area7 = ({data, time}) => {
         }).then(data=>{
             console.log(data);
             setCarbonData(data);
+            setCarbontitle(data.carbon_now);
             setCarbonchart(data.carbon_hourly.map((i,index)=>({t:index,value:i.a})))
         })
     },[])
-
-    React.useEffect(()=>{
-        setCarbontitle(carbon_data.carbon_now);
-    },[carbon_data]);
 
     return (
         <FilledCurve

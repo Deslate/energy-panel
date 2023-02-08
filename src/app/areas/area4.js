@@ -4,28 +4,29 @@ import FilledCurve from "./area_templates/filled_curve/FilledCurve";
 
 const Area4 = ({data, time}) => {
 
-    const [ current_data, setCurrentData ] = React.useState([])
+    const [ power_title, setPowertitle ] = React.useState(0.0);
+    const [ power_chart, setPowerchart] = React.useState([]);
 
     React.useEffect(()=>{
-        fetch('api/current/').then(res=>res.json()).then(data=>{
-            // console.log(data.result)
-            setCurrentData(data.result.map((i,index)=>({t:index,value:i.a})))
-            // setCurrentData([
-            //     {t: '1', value: 100},
-            //     {t: '2', value: 100},
-            // ])
+        fetch('api/pv/').then(res=>{
+            return res.json();
+        }).then(data=>{
+            console.log(data);
+            setPowertitle(data.power_now);
+            setPowerchart(data.dc_power.map((i,index)=>({t:index,value:i.a})))
         })
     },[])
 
+
     return (
         <FilledCurve
-            data = { current_data }
+            data = { power_chart }
             time = { time }
             unit = {"gCO2/kWh"}
             keyname = {"CEF"}
             display_title={"当前出力"}
             layout={'leftbottom'}
-            number={19230}
+            number={ power_title }
         />
     )
 }
