@@ -16,7 +16,7 @@ import { Area, Line } from '@ant-design/charts';
 
 const FilledCurveComponent = ({data, fill}) => {
     const config = {
-        data: data,
+        data: data.map((i,index)=>({t:index,value:i.a})),
         xField: 't',
         yField: 'value',
         areaStyle: () => {
@@ -79,6 +79,7 @@ function PvState({shown, setShown, item }) {
     const [ data_CEF_cache, setDataCEFCache ] = React.useState(null)
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
+    const [ pv_data, setPVData] = React.useState([])
     
     React.useEffect(()=>{
         let flag = true;
@@ -112,6 +113,15 @@ function PvState({shown, setShown, item }) {
         }
     },[mode])
 
+    React.useEffect(()=>{
+        fetch('api/pv/').then(res=>{
+            return res.json()
+        }).then(data=>{
+            console.log(data)
+            setPVData(data)
+        })
+    },[])
+
     return (
         <div className="PvStateWindow area" hidden={!shown}>
             <div className='layout'>
@@ -143,13 +153,13 @@ function PvState({shown, setShown, item }) {
                     </div>
 
                     <div className='line2-1'>
-                        <FilledCurveComponent data={item.data1||[]} />
+                        <FilledCurveComponent data={pv_data.dc_power||[]} />
                     </div>
                     <div className='line2-2'>
-                        <FilledCurveComponent data={item.data2||[]} fill />
+                        <FilledCurveComponent data={pv_data.dc_discharge_quality||[]} fill />
                     </div>
                     <div className='line2-3'>
-                        <FilledCurveComponent data={item.data3||[]} />
+                        <FilledCurveComponent data={pv_data.node_carbon_intensity||[]} />
                     </div>
                 </div>
 
