@@ -39,7 +39,7 @@ const CircleProgress = ({progress}) => {
 
 const FilledCurveComponent = ({data}) => {
     const config = {
-        data: data,
+        data: data.map((i,index)=>({t:index,value:i.a})),
         xField: 't',
         yField: 'value',
         areaStyle: () => {
@@ -91,6 +91,7 @@ function BatteryState({shown, setShown, item }) {
     const [ data_CEF_cache, setDataCEFCache ] = React.useState(null)
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
+    const [ battery_data, setBatteryData] = React.useState([])
     
     React.useEffect(()=>{
         let flag = true;
@@ -128,6 +129,15 @@ function BatteryState({shown, setShown, item }) {
         }
     },[mode])
     const [ time, setTime ] = React.useState(new Date().getHours())
+
+    React.useEffect(()=>{
+        fetch('api/battery_state/').then(res=>{
+            return res.json()
+        }).then(data=>{
+            console.log(data)
+            setBatteryData(data)
+        })
+    },[])
 
     
 
@@ -182,7 +192,7 @@ function BatteryState({shown, setShown, item }) {
                         <div className='line1-middle-item electricity'>
                             <div className='line1-middle-pitch-background'>
                                 <div className='line1-middle-pitch-number'>
-                                    {20}
+                                    {battery_data.current_now}
                                 </div>
                                 <div className='line1-middle-pitch-text'>
                                     电流
@@ -194,7 +204,7 @@ function BatteryState({shown, setShown, item }) {
                         <div className='line1-middle-item voltage'>
                             <div className='line1-middle-pitch-background'>
                                 <div className='line1-middle-pitch-number'>
-                                    {374}
+                                    {battery_data.voltage_now}
                                 </div>
                                 <div className='line1-middle-pitch-text'>
                                     电压
@@ -206,7 +216,7 @@ function BatteryState({shown, setShown, item }) {
                         <div className='line1-middle-item power'>
                             <div className='line1-middle-pitch-background'>
                                 <div className='line1-middle-pitch-number'>
-                                    {7480}
+                                    {battery_data.power_now}
                                 </div>
                                 <div className='line1-middle-pitch-text'>
                                     功率
@@ -218,7 +228,7 @@ function BatteryState({shown, setShown, item }) {
                         <div className='line1-middle-item Soc'>
                             <div className='line1-middle-pitch-background'>
                                 <div className='line1-middle-pitch-number'>
-                                    {70}
+                                    {battery_data.soc_now}
                                 </div>
                                 <div className='line1-middle-pitch-text'>
                                     Soc
@@ -230,7 +240,7 @@ function BatteryState({shown, setShown, item }) {
                         <div className='line1-middle-item SoH'>
                             <div className='line1-middle-pitch-background'>
                                 <div className='line1-middle-pitch-number'>
-                                    {30}
+                                    {battery_data.soh_now}
                                 </div>
                                 <div className='line1-middle-pitch-text'>
                                     SoH
@@ -247,7 +257,7 @@ function BatteryState({shown, setShown, item }) {
                             累计节省
                         </div>
                         <div className='total-save-number'>
-                            {12345}
+                            {battery_data.price_yearly}
                         </div>
                     </div>
 
@@ -268,13 +278,13 @@ function BatteryState({shown, setShown, item }) {
                     </div>
 
                     <div className='line2-1'>
-                        <FilledCurveComponent data={item.data1||[]} />
+                        <FilledCurveComponent data={battery_data.charge_electricity_chart||[]} />
                     </div>
                     <div className='line2-2'>
-                        <FilledCurveComponent data={item.data2||[]} />
+                        <FilledCurveComponent data={battery_data.discharge_electricity_chart||[]} />
                     </div>
                     <div className='line2-3'>
-                        <FilledCurveComponent data={item.data3||[]} />
+                        <FilledCurveComponent data={battery_data.price_chart||[]} />
                     </div>
                 </div>
 

@@ -8,7 +8,7 @@ const Area4 = ({data, time}) => {
 
     React.useEffect(()=>{
         fetch('api/current/').then(res=>res.json()).then(data=>{
-            console.log(data.result)
+            // console.log(data.result)
             setCurrentData(data.result.map((i,index)=>({t:index,value:i.a})))
             // setCurrentData([
             //     {t: '1', value: 100},

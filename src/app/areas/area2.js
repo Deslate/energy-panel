@@ -16,7 +16,7 @@ const Area2 = ({data, time}) => {
         fetch('api/price_result/').then(res=>{
             return res.json()
         }).then(data=>{
-            console.log(data)
+            // console.log(data)
             setPriceYear(data.price_yearly)
         })
     },[data])
