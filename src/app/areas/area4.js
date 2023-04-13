@@ -8,7 +8,7 @@ const Area4 = ({data, time}) => {
     const [ power_chart, setPowerchart] = React.useState([]);
 
     React.useEffect(()=>{
-        fetch('api/pv/').then(res=>{
+        fetch('/api/pv/').then(res=>{
             return res.json();
         }).then(data=>{
             console.log(data);

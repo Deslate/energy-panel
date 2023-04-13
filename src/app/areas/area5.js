@@ -8,7 +8,7 @@ const Area5 = ({data, time}) => {
     const [ discharge_chart, setDischargechart] = React.useState([]);
 
     React.useEffect(()=>{
-        fetch('api/pv/').then(res=>{
+        fetch('/api/pv/').then(res=>{
             return res.json();
         }).then(data=>{
             console.log(data);

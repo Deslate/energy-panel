@@ -17,21 +17,21 @@ const CircleProgress = ({progress}) => {
         <svg height="140" width="140">
             <defs>
                 <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#469DB9" />
-                    <stop offset="100%" stop-color="rgba(54, 141, 169, 0.4)" />
+                    <stop offset="0%" stopColor="#469DB9" />
+                    <stop offset="100%" stopColor="rgba(54, 141, 169, 0.4)" />
                 </linearGradient>
             </defs>
             <circle className='circle-progress-background'
                 cx="70" cy="72.5" r="50" 
                 fill="none" stroke="#293A4E"
-                stroke-width="5" stroke-linecap="round"
-                stroke-dasharray="258,10000"
+                strokeWidth="5" strokeLinecap="round"
+                strokeDasharray="258,10000"
             />
             <circle className="circle-progress-content"
                 cx="70" cy="72.5" r="50" 
                 fill="none" stroke="url(#gradient)" 
-                stroke-width="5" stroke-linecap="round"
-                stroke-dasharray={`${258 * progress/100},10000`}
+                strokeWidth="5" strokeLinecap="round"
+                strokeDasharray={`${258 * progress/100},10000`}
             />
         </svg>
     )
@@ -92,46 +92,10 @@ function BatteryState({shown, setShown, item }) {
     const [ data_Price_cache, setDataPriceCache ] = React.useState(null)
     const [ data_Total_cache, setDataTotalCache ] = React.useState(null)
     const [ battery_data, setBatteryData] = React.useState([])
-    
-    React.useEffect(()=>{
-        let flag = true;
-        switch(mode){
-            case 'CEF': if(data_CEF_cache){setData(data_CEF_cache); flag=false;} break;
-            case 'Price': if(data_Price_cache){setData(data_Price_cache); flag=false;} break;
-            case 'Total': if(data_Total_cache){setData(data_Total_cache); flag=false;} break;
-        }
-        if(flag){
-            const hide = message.loading('模式切换中..', 0);
-            setLoading(true)
-            fetch(`${API}/?mode=${mode}`)
-            .then(res=>{
-                setLoading(false)
-                hide()
-                if(res.status==200){
-                    try{
-                        return res.json()
-                    }catch{
-                        return
-                    }
-                }else{
-                    message.error('Server Down')
-                    return 
-                }
-            })
-            .then(_data=>{if(_data){
-                setData(_data);
-                switch(mode){
-                    case 'CEF': setDataCEFCache(_data); break;
-                    case 'Price': setDataPriceCache(_data); break;
-                    case 'Total': setDataTotalCache(_data); break;
-                }
-            }})
-        }
-    },[mode])
-    const [ time, setTime ] = React.useState(new Date().getHours())
+
 
     React.useEffect(()=>{
-        fetch('api/battery_state/').then(res=>{
+        fetch('/api/battery_state/').then(res=>{
             return res.json()
         }).then(data=>{
             console.log(data)

@@ -13,7 +13,7 @@ const Area2 = ({data, time}) => {
     const [ price_year, setPriceYear ] = React.useState("--")
 
     React.useEffect(()=>{
-        fetch('api/price_result/').then(res=>{
+        fetch('/api/price_result/').then(res=>{
             return res.json()
         }).then(data=>{
             // console.log(data)

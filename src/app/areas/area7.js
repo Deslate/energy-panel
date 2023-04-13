@@ -9,7 +9,7 @@ const Area7 = ({data, time}) => {
     const [ carbon_chart, setCarbonchart] = React.useState([]);
 
     React.useEffect(()=>{
-        fetch('api/carbon/').then(res=>{
+        fetch('/api/carbon/').then(res=>{
             return res.json();
         }).then(data=>{
             console.log(data);

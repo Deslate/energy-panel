@@ -37,37 +37,7 @@ function App() {
     const [ show_pv_detail, setShowPvDetail ] = React.useState(false)
     const [ show_co2_detail, setShowCO2Detail ] = React.useState(false)
 
-    React.useEffect(()=>{
-        let flag = true;
-        switch(mode){
-            case 'CEF': if(data_CEF_cache){setData(data_CEF_cache); flag=false;} break;
-            case 'Price': if(data_Price_cache){setData(data_Price_cache); flag=false;} break;
-            case 'Total': if(data_Total_cache){setData(data_Total_cache); flag=false;} break;
-        }
-        if(flag){
-            const hide = message.loading('模式切换中..', 0);
-            setLoading(true)
-            fetch(`${API}/?mode=${mode}`)
-            .then(res=>{
-                setLoading(false)
-                hide()
-                if(res.status==200){
-                    return res.json()
-                }else{
-                    message.error('Server Down')
-                    return
-                }
-            })
-            .then(_data=>{if(_data){
-                setData(_data);
-                switch(mode){
-                    case 'CEF': setDataCEFCache(_data); break;
-                    case 'Price': setDataPriceCache(_data); break;
-                    case 'Total': setDataTotalCache(_data); break;
-                }
-            }})
-        }
-    },[mode])
+   
     const [ time, setTime ] = React.useState(new Date().getHours())
 
     return (

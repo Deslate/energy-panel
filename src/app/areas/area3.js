@@ -11,7 +11,7 @@ const Area3 = ({ data, time }) => {
     const [ er_chart, setErchart] = React.useState([]);  
     
     React.useEffect(()=>{
-        fetch('api/emission_reduction/').then(res=>{
+        fetch('/api/emission_reduction/').then(res=>{
             return res.json();
         }).then(data=>{
             console.log(data);
